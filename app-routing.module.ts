@@ -8,6 +8,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ProfilComponent } from './profil/profil.component';
 import { ProposComponent } from './propos/propos.component';
 import { ScolaireComponent } from './scolaire/scolaire.component';
+import { Templet1Component } from './templet1/templet1.component';
 
 const routes: Routes = [
   {path:'' ,redirectTo:'login', pathMatch:'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
    {path: 'competence', component: CompetenceComponent},
   {path: 'scolaire', component: ScolaireComponent},
   {path: 'profil', component: ProfilComponent},
-  {path: 'propos', component: ProposComponent}
+  {path: 'propos', component: ProposComponent},
+  {path: 'templet1', component: Templet1Component}
 ];
 
 @NgModule({
