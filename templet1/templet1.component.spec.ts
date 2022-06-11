@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { Templet1Component } from './templet1.component';
 
-describe('Templet1Component', () => {
+describe('Templet1Component', () => {yield
   let component: Templet1Component;
   let fixture: ComponentFixture<Templet1Component>;
 
