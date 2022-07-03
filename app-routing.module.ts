@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CompetenceComponent } from './competence/competence.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { LoginComponent } from './component/login/login.component';
 import { RegisterComponent } from './component/register/register.component';
@@ -16,7 +15,7 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   {path:'register',component: RegisterComponent},
   {path: 'navbar', component: NavbarComponent},
-   {path: 'competence', component: CompetenceComponent},
+
   {path: 'scolaire', component: ScolaireComponent},
   {path: 'profil', component: ProfilComponent},
   {path: 'propos', component: ProposComponent},
