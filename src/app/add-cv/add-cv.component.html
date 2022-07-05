@@ -1,0 +1,146 @@
+<div>
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm" >
+        <div>
+            <div>
+                <label for="nom">Nom</label><br>
+                <input type="text" id="nom" name="nom" ngModel >     
+            </div>
+
+            <div>
+                <label for="prenom">Prenom</label><br>
+                <input type="text" id="prenom" name="prenom" ngModel >    
+            </div>
+
+            <div>
+                <label for="dateDeNaissance">Date de naissance</label><br>
+                <input type="date" id="dateDeNaissance" name="dateDeNaissance" ngModel >    
+            </div>
+
+            <div>
+                <label for="lieuNaissance">Lieu de naissance</label><br>
+                <input type="text" id="lieuNaissance" name="lieuNaissance" ngModel >    
+            </div>
+
+            <div>
+                <label for="telephone">Telephone</label><br>
+                <input type="tel" id="telephone" name="telephone" ngModel >    
+            </div>
+
+            <div>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email" ngModel >    
+            </div>
+
+            <div>
+                <label for="adressPostal">Adress Postale</label><br>
+                <input type="text" id="adressPostal" name="adressPostal" ngModel >    
+            </div>
+
+            <div>
+                <label for="ville">Ville</label><br>
+                <input type="text" id="ville" name="ville" ngModel >     
+            </div>
+
+            <div>
+                <label for="sexe">sexe</label><br>
+                <select name="sexe" id="sexe"ngModel>
+                    <option ngValue="autre"> Autre</option>
+                    <option ngValue="homme"> Homme</option>
+                    <option ngValue="femme"> Femme</option>
+                </select>   
+            </div>
+
+            <div>
+                <label for="nationnalite">Nationnalite</label><br>
+                <input type="text" id="nationnalite" name="nationnalite"ngModel >     
+            </div>
+
+            <div>
+                <label for="etatCivil">Etat Civil</label><br>
+                <input type="text" id="etatCivil" name="etatCivil"ngModel >    
+            </div>
+
+            <div>
+                <label for="profil">Profil</label><br>
+                <input type="text" id="profil" name="profil"ngModel >     
+            </div>
+
+            <div >
+                <h3>
+                    vos Competence
+                </h3>
+                <div *ngFor="let item of competences" >
+                     <p> {{item.intitule}}</p>
+                </div>
+                <app-competance  (intitule)="intitule=$event" (niveau)="niveau=$event" > </app-competance><br>
+
+                <button (click)="addCompetence()">add Competence</button>
+            </div>
+
+
+            <div >
+
+                <h3>
+                    vos Exprience
+                </h3>
+                <div *ngFor="let item of experiences" >
+                     <p> {{item.intitule}}</p>
+                     <p> {{item.poucentage}}</p>
+
+                </div>
+              
+                <app-experience (intitule)="intitule=$event" (niveau)="niveau=$event" > </app-experience><br>
+
+                <button (click)="addExperience()">add Experience</button>
+
+              
+            </div>
+
+
+            <div >
+                <h3>
+                    vos formations
+                </h3>
+                <div *ngFor="let item of langues" >
+                     <p> {{item.intitule}}</p>
+                </div>
+                <app-formation  (intitule)="intitule=$event" (niveau)="niveau=$event" > </app-formation><br>
+
+                <button (click)="addFormation()">add Formation</button>
+            </div>
+
+            <div >
+                <h3>
+                    vos Langue
+                </h3>
+                <div *ngFor="let item of langues" >
+                     <p> {{item.intitule}}</p>
+                </div>
+                <app-langue  (intitule)="intitule=$event" (niveau)="niveau=$event" > </app-langue><br>
+
+                <button (click)="addLangue()">add Langue</button>
+            </div>
+          
+
+            
+
+            <!-- <div formArrayName = "langues">
+                <h3>
+                    vos Langues
+                </h3>
+                <div *ngFor="let formation of getLangue().controls; let i = index " > 
+                        <input type="text"  [name]="i" >     
+                </div>
+                <button type="button" (click)="onAddLangue()">add Langue</button>
+
+            </div> -->
+
+
+            
+        </div>
+
+        <button type="submit">submit</button>
+       
+      
+    </form>
+</div>

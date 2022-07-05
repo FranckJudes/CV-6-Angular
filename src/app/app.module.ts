@@ -14,6 +14,11 @@ import { environment } from 'src/environments/environment';
 import { FormsModule } from '@angular/forms';
 
 import { CathegorieComponent } from './cathegorie/cathegorie.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { CompetanceComponent } from './competance/competance.component';
+import { FormationComponent } from './formation/formation.component';
+import { LangueComponent } from './langue/langue.component';
+import { AddCvComponent } from './add-cv/add-cv.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +32,11 @@ import { CathegorieComponent } from './cathegorie/cathegorie.component';
     RegisterComponent,
     DashboardComponent,
     CathegorieComponent,
+    ExperienceComponent,
+    CompetanceComponent,
+    FormationComponent,
+    LangueComponent,
+    AddCvComponent,
  
   ],
   imports: [
